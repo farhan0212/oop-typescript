@@ -11,7 +11,8 @@ describe("Method Override", () => {
 
   class Manager extends Employee {
     sayHello(name: string): void {
-      console.info(`Hello ${name}, My name is ${this.name} i'm your manager!`);
+      super.sayHello(name);
+      console.info(`I'm your manager`);
     }
   }
 
